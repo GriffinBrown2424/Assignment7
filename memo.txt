@@ -1,0 +1,26 @@
+For this I created two systems using non linear data structures
+to model how a hospital might organize doctors and manage emergency room
+patients. The first system is a doctor reporting structure built using
+a binary tree. The second system is an emergency queue built using a 
+min heap.
+The doctor reporting tree uses a binary tree because doctors are organized 
+in a hierarchy and each doctor can have up to two doctors reporting to them, 
+one on the left and one on the right. The tree starts with a root doctor 
+at the top. When a new doctor is added the program searches the tree 
+using recursion until it finds the correct parent doctor. The new doctor 
+is then added to the correct side and tree traversal methods are used to 
+visit doctors in different orders. Preorder traversal visits the 
+root first and inorder traversal visits doctors in a structured order
+and postorder traversal visits child doctors before their manager.
+
+The emergency queue uses a min heap because patients need to be 
+treated based on urgency not the order they arrive. Each patient has 
+an urgency number from 1 to 10, where 1 is the most urgent. The heap 
+always keeps the most urgent patient at the top. When a patient is a
+dded the heap reorganizes itself using heapify_up. When a patient is 
+removed heapify_down restores the heap order.
+
+Using these data structures makes the system efficient and organized. 
+Trees are good for showing relationships while heaps are good for 
+handling priorities. They help solve real world problems 
+in a clear and effective way.
